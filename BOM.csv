@@ -1,0 +1,9 @@
+Part,	Qty,	Unit,Total,	Vendor
+XIAO ESP32-C3,1,$4.99,$4.99,seeed studio
+0.96 OLED,1,$2.50,$2.50,Amazon
+MPU6050,1,$2.29,$2.29,Amazon
+DHT11,1,$3.33,$3.33,Amazon
+MX Switches,4,$0.18,$0.72,Amazon
+Keycaps,4,$0.60,$2.40,Amazon
+10k Resistor,1,$0.05,$0.05,Amazon
+PCB,1,$9.20,$9.20,jlcpcb
