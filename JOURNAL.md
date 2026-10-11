@@ -15,7 +15,7 @@
 ## Contents
 
 1. [2026-10-11 – First worked on the schematic, which was probably the easier part of the whole thing. Learned how to add symbols, connect things with wires, and labels.](#2026-10-11-first-worked-on-the-schematic-which-was-probably-)
-2. [2026-10-11 – Day 2 of Starbie: it's done i think](#2026-10-11-day-2-of-starbie-its-done-i-think)
+2. [2026-10-11 – Day 2 of Starbie:](#2026-10-11-day-2-of-starbie)
 
 ## Design
 
@@ -31,11 +31,11 @@ Next Steps: Clear out my storage so that I can download the esp32 library thing 
 
 [Timelapse](https://lookout.hackclub.com/api/media/9f6c6853-0952-44ae-b39f-393e054e1076/video.mp4)
 
-### 2026-10-11 – Day 2 of Starbie: it's done i think
+### 2026-10-11 – Day 2 of Starbie:
 
 **2h**
 
-Day 2 of Starbie: it's done i think
+Day 2 of Starbie:
 
 Today, I worked on the firmware, which was relatively straightforward since it was mostly copy paste. Besides drawing sparkles, I added a drawing something method that will draw something like a square. After that,  I worked on the gerbers file, which was relatively straightforward with a youtube tutorial. Basically, you just have to adjust the settings according to the manufacturer (in this case, jlcpcb).
 
@@ -43,7 +43,7 @@ Then, I worked on the version control, which was kind of annoying. It's been a w
 
 After that, I worked on the README.md. I tried working on it in VScode, but I got confused on how to add images, so i just decided to work on it in GitHub directly. To add images, drag and drop from finder and then it automatically adds a url. Then, I worked on the BOM and created a BOM.csv file using Google Sheets (basically create a table in google sheets and then export as .csv).
 
-Next Steps: I'm not sure? I feel like I'm about done with this project, but I should definitely actually learn and understand how the firmware and wiring works cause this project was a lot of copy pasting.
+Next Steps: I'm not sure? I feel like I'm about done with this project, but I should definitely actually learn and understand how the firmware and wiring works cause this project was a lot of copy pasting. Also, create more images. I need to fill up the remaining 1 and a half hours
 
 ![Screenshot 2026-10-11 at 2.21.05 AM](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/jDbpq3iVZq4JxJuDFA5IozI1WrRdIYiy/fbd4956c8b317c5317d9711fe83428747b86ce9adadaada8c79e7c3eac349ef9.png)
 
