@@ -5,6 +5,7 @@ A tiny motion-controlled digital pet, built for HackClub Halflife because I real
 
 ## Process
 1. Designed the Schematic
+
    <img width="589" height="539" alt="Screenshot 2026-10-11 at 2 21 05 AM" src="https://github.com/user-attachments/assets/99ed43cd-ed8e-48c0-b738-d1157fb1d598" />
 
 2. PCB routing and created a funny shape with it
