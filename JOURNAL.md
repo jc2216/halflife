@@ -10,7 +10,7 @@
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
-| Week 1 | Tier 1 | 6.78h | 2 |
+| Week 1 | Tier 1 | 4.38h | 2 |
 
 ## Contents
 
@@ -21,7 +21,7 @@
 
 ### 2026-10-11 – First worked on the schematic, which was probably the easier part of the whole thing. Learned how to add symbols, connect things with wires, and labels.
 
-**4.78h**
+**2.38h**
 
 First worked on the schematic, which was probably the easier part of the whole thing. Learned how to add symbols, connect things with wires, and labels.
 
