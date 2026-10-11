@@ -43,7 +43,7 @@ Then, I worked on the version control, which was kind of annoying. It's been a w
 
 After that, I worked on the README.md. I tried working on it in VScode, but I got confused on how to add images, so i just decided to work on it in GitHub directly. To add images, drag and drop from finder and then it automatically adds a url. Then, I worked on the BOM and created a BOM.csv file using Google Sheets (basically create a table in google sheets and then export as .csv).
 
-Next Steps: I'm not sure? I feel like I'm about done with this project, but I should definitely actually learn and understand how the firmware and wiring works cause this project was a lot of copy pasting. Also, create more images. I need to fill up the remaining 1 and a half hours
+Next Steps: put in some of my ideas so that it's not copy paste and prob change up the BOM.
 
 ![Screenshot 2026-10-11 at 2.21.05 AM](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/jDbpq3iVZq4JxJuDFA5IozI1WrRdIYiy/fbd4956c8b317c5317d9711fe83428747b86ce9adadaada8c79e7c3eac349ef9.png)
 
