@@ -13,4 +13,5 @@ A tiny motion-controlled digital pet, built for HackClub Halflife because I real
   <img width="881" height="497" alt="Screenshot 2026-10-11 at 2 21 41 AM" src="https://github.com/user-attachments/assets/9ec72f9e-1276-4254-942b-ddbcb1557ad1" />
 
 3. Firmware! Added sparkles and created own sprite
+
    <img width="32" height="32" alt="sprite" src="https://github.com/user-attachments/assets/2b233861-0f77-491d-aa6b-13b382f68789" />
