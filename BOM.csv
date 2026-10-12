@@ -7,3 +7,4 @@ MX Switches,4,$0.18,$0.72,Amazon
 Keycaps,4,$0.60,$2.40,Amazon
 10k Resistor,1,$0.05,$0.05,Amazon
 PCB,1,$9.20,$9.20,jlcpcb
+passive piezo buzzer,1,$1.50,$1.50,adafruit
