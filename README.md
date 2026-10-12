@@ -1,11 +1,10 @@
 ## Starbie
 A tiny motion-controlled digital pet, built for HackClub Halflife because I really want a 3D printer.
-New Things!!! I added a buzzer so that twinkle twinkle little star plays when the sprite is napping.
+New Things!!! I added a buzzer so that twinkle twinkle little star plays when the sprite is napping. I also added a rain animation when the humidity>certain amt. We'll see if that works. 
 
 Next Steps: 
-* Change up some of the animation
+* Change up some of the animations.
 * implement sound during other actions/when using the selection thing.
-* Also, create rain animation when humidity>certain amount.
 
 ---
 
