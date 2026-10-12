@@ -22,7 +22,7 @@
 | [PCB](https://www.jlcpcb.com/) | pcb (has $6 coupon) | 1 | $3.20 | $3.20 | [jlcpcb](https://www.jlcpcb.com/) |
 | [passive piezo buzzer](https://www.aliexpress.us/item/3256808866459472.html?spm=a2g0o.cart.0.0.68b738daBerPGV&mp=1&pdp_npi=6%40dis%21USD%21USD+7.03%21USD+3.23%21%21USD+3.23%21%21%21%402101dedf17917768899491166e0ca6%2112000047723989772%21ct%21US%218283464399%21%211%210%21&_gl=1*pvy0x8*_gcl_aw*R0NMLjE3OTE3NzQxNzIuQ2p3S0NBanc1NnpXQmhCMEVpd0FkUE9RT1VMQnBnLVZkNnBZc25QTXFDTVpzMnJuZ1dpd0pLVTR0UE50YUVZb1lReWRsWnhweUtIUWRCb0N6N0lRQXZEX0J3RQ..*_gcl_au*MTg2MDU4NzQ1Ni4xNzkxNzc0MTQ1*_ga*NDI2ODA3NTEwLjE3OTE3NzQxNjQ.*_ga_VED1YSGNC7*czE3OTE3NzQxNjQkbzEkZzEkdDE3OTE3NzY4ODYkajUyJGwwJGgw&gatewayAdapt=glo2usa) | play music | 1 | $0.64 | $0.64 | [aliexpress](https://www.aliexpress.us/item/3256808866459472.html?spm=a2g0o.cart.0.0.68b738daBerPGV&mp=1&pdp_npi=6%40dis%21USD%21USD+7.03%21USD+3.23%21%21USD+3.23%21%21%21%402101dedf17917768899491166e0ca6%2112000047723989772%21ct%21US%218283464399%21%211%210%21&_gl=1*pvy0x8*_gcl_aw*R0NMLjE3OTE3NzQxNzIuQ2p3S0NBanc1NnpXQmhCMEVpd0FkUE9RT1VMQnBnLVZkNnBZc25QTXFDTVpzMnJuZ1dpd0pLVTR0UE50YUVZb1lReWRsWnhweUtIUWRCb0N6N0lRQXZEX0J3RQ..*_gcl_au*MTg2MDU4NzQ1Ni4xNzkxNzc0MTQ1*_ga*NDI2ODA3NTEwLjE3OTE3NzQxNjQ.*_ga_VED1YSGNC7*czE3OTE3NzQxNjQkbzEkZzEkdDE3OTE3NzY4ODYkajUyJGwwJGgw&gatewayAdapt=glo2usa) |
 | **Parts subtotal** | — | — | — | **$15.02** | — |
-| **Tax & shipping** | — | — | — | **$20.74** | — |
-| **Total** | — | — | — | **$35.76** | — |
+| **Tax & shipping** | — | — | — | **$14.82** | — |
+| **Total** | — | — | — | **$29.84** | — |
 
-**$5.76 over the tier's funding.** Every tier gives a fixed amount for parts, so this needs cutting back or a higher tier.
+$0.16 left of the tier's funding.
