@@ -20,6 +20,7 @@
 #include <Preferences.h>
 #include <math.h>
 #include "pitches.h"
+#include "rain_frames.h"
 
 // =========================== BEGINNER SETTINGS ===========================
 // Everything most builders will want to customize is in this one section.
@@ -50,6 +51,17 @@ const int STARTING_FULLNESS = 65;
 
 // Set true, upload once, then set it back to false if you want a fresh pet.
 const bool RESET_SAVED_PET_ON_BOOT = false;
+
+//humidity checker
+const float RAIN_OFF_HUMIDITY = 70.0;
+const float RAIN_ON_HUMIDITY = 65.0;
+bool raining = false;
+const int RAIN_FRAME_COUNT = 10;
+const uint16_t RAIN_FRAME_MS = 67;
+const uint8_t *const RAIN_FRAMES[RAIN_FRAME_COUNT] = {
+  frame0, frame1, frame2, frame3, frame4,
+  frame5, frame6, frame7, frame8, frame9
+};
 
 //melody for twinkle twinkle little star
 const int melody[] = {
@@ -308,6 +320,18 @@ void updateDht() {
   }
 }
 
+void updateRain(){
+  if(isNan(humidity)){
+    return;
+  }
+  if(humidity>=RAIN_ON_HUMIDITY && !raining){
+    raining = true;
+  }
+  else if (humidity<=RAIN_OFF_HUMIDITY && raining){
+    raining = false;
+  }
+}
+
 int petWalkingX(uint32_t now) {
   const int farthestX = SCREEN_WIDTH - PET_SPRITE_WIDTH;
   const uint32_t roundTrip = static_cast<uint32_t>(farthestX) * 2;
@@ -449,6 +473,13 @@ void handleButtons() {
     currentView = currentView == STATS_VIEW ? PET_VIEW : STATS_VIEW;
   }
 }
+void drawRain(uint32_t now){
+  if(!raining){
+    return;
+  }
+  const int frame = (now / RAIN_FRAME_MS) % RAIN_FRAME_COUNT;
+  display.drawBitmap(0, 0, RAIN_FRAMES[frame], SCREEN_WIDTH, SCREEN_HEIGHT, SSD1306_WHITE);
+}
 void drawSomething(int x, int y) {
   display.drawPixel(x, y, SSD1306_WHITE);
   display.drawPixel(x + 1, y, SSD1306_WHITE);
@@ -542,6 +573,7 @@ void drawPet() {
     drawSleepZs(now, petX, petY);
   }
   drawHearts(now, petX, petY);
+  drawRain(now);
 }
 
 void drawMenuItem(int item) {
@@ -691,6 +723,7 @@ void setup() {
 void loop() {
   updateMpu();
   updateDht();
+  updateRain();
   updatePetTimers();
   handleButtons();
   playNapMusic(millis());
