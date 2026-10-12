@@ -1,16 +1,24 @@
 ## Starbie
-A tiny motion-controlled digital pet, built for HackClub Halflife because I really want a 3D printer. 
+A tiny motion-controlled digital pet, built for HackClub Halflife because I really want a 3D printer.
+New Things!!! I added a buzzer so that twinkle twinkle little star plays when the sprite is napping.
+
+Next Steps: 
+* Change up some of the animation
+* implement sound during other actions/when using the selection thing.
+* Also, create rain animation when humidity>certain amount.
 
 ---
 
 ## Process
 1. Designed the Schematic
 
-   <img width="589" height="539" alt="Screenshot 2026-10-11 at 2 21 05 AM" src="https://github.com/user-attachments/assets/99ed43cd-ed8e-48c0-b738-d1157fb1d598" />
+   <img width="589" height="539" alt="Screenshot 2026-10-11 at 2 21 05 AM" src="https://github.com/user-attachments/assets/0975e67d-5d53-4338-9e3f-77da17382c48" />
 
 2. PCB routing and created a funny shape with it
-  <img width="686" height="445" alt="Screenshot 2026-10-11 at 2 21 29 AM" src="https://github.com/user-attachments/assets/33feedc9-f737-4cab-9a51-b58e4f52f9bb" />
-  <img width="881" height="497" alt="Screenshot 2026-10-11 at 2 21 41 AM" src="https://github.com/user-attachments/assets/9ec72f9e-1276-4254-942b-ddbcb1557ad1" />
+
+   <img width="686" height="445" alt="Screenshot 2026-10-11 at 2 21 29 AM" src="https://github.com/user-attachments/assets/29db1449-9d8d-4267-9938-bcdd2f5bfb9f" />
+
+   <img width="881" height="497" alt="Screenshot 2026-10-11 at 2 21 41 AM" src="https://github.com/user-attachments/assets/aa6cb764-304f-4fb7-a7c9-ded4167f3668" />
 
 3. Firmware! Added sparkles and created own sprite
 
