@@ -22,7 +22,7 @@
 | [PCB](https://www.jlcpcb.com/) | pcb (has $6 coupon) | 1 | $3.20 | $3.20 | [jlcpcb](https://www.jlcpcb.com/) |
 | [passive piezo buzzer](https://www.adafruit.com/product/160?srsltid=AU7gw4XA2yECFHNmqFXTQR_ZAbdq57nl-JREQ2r2V5wUpZmxwsDWknZp) | play music | 1 | $1.50 | $1.50 | [adafruit](https://www.adafruit.com/product/160?srsltid=AU7gw4XA2yECFHNmqFXTQR_ZAbdq57nl-JREQ2r2V5wUpZmxwsDWknZp) |
 | **Parts subtotal** | — | — | — | **$15.88** | — |
-| **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$15.88** | — |
+| **Tax & shipping** | — | — | — | **$8.65** | — |
+| **Total** | — | — | — | **$24.53** | — |
 
-$14.12 left of the tier's funding.
+$5.47 left of the tier's funding.
