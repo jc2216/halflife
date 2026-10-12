@@ -19,17 +19,19 @@
 #include <DHT.h>
 #include <Preferences.h>
 #include <math.h>
+#include "pitches.h"
 
 // =========================== BEGINNER SETTINGS ===========================
 // Everything most builders will want to customize is in this one section.
 
 // --- Your board's pins ----------------------------------------------------
 // These are ESP32-C3 GPIO numbers, with the XIAO pin labels beside them.
-const int I2C_SDA_PIN = 6;       // XIAO D4: OLED + MPU6050 SDA
-const int I2C_SCL_PIN = 7;       // XIAO D5: OLED + MPU6050 SCL
+const int I2C_SDA_PIN = 7;       // XIAO D5: OLED + MPU6050 SDA
+const int I2C_SCL_PIN = 6;       // XIAO D4: OLED + MPU6050 SCL
 const int DHT_PIN = 3;           // XIAO D1: DHT11 data
 const int BUTTON_ONE_PIN = 4;    // XIAO D2: opens/confirms the radial menu
 const int BUTTON_TWO_PIN = 5;    // XIAO D3: shows/hides stats
+const int BUZZER_PIN = 21;        // XIAO D6: will play sound 
 
 // Set this to false if your submission does not have a DHT11.
 const bool USE_DHT11 = true;
@@ -48,6 +50,32 @@ const int STARTING_FULLNESS = 65;
 
 // Set true, upload once, then set it back to false if you want a fresh pet.
 const bool RESET_SAVED_PET_ON_BOOT = false;
+
+//melody for twinkle twinkle little star
+const int melody[] = {
+  NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
+  NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_C4,
+  NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4,
+  NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4,
+  NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
+  NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_C4
+};
+
+const uint8_t noteDurations[] = {  
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2
+};
+
+const int TWINKLE_LEN = sizeof(melody) / sizeof(melody[0]);
+const uint16_t SONG_GAP_MS  = 1500;  // pause before the song repeats
+
+bool songPlaying = false;
+int noteIndex = 0;
+uint32_t noteTime = 0;
 
 // --- Radial menu ----------------------------------------------------------
 // These four actions appear at TOP, RIGHT, BOTTOM, then LEFT in the menu.
@@ -68,7 +96,7 @@ struct MenuItem {
 };
 
 const MenuItem MENU_ITEMS[] = {
-  {"NAP",   1,  18, -4, NAP_REACTION},   // top: sleep and emit Zs
+  {"NAP",   1,  18, -4, NAP_REACTION},   // top: sleep and emit Zs // label, delta joy, delta energy, delta fullness, reaction
   {"PLAY", 12, -9, -5, RUN_REACTION},    // right: two fast laps + hearts
   {"FEED",  3,  2,  18, JUMP_REACTION},  // bottom: wiggle and jump
   {"PET",   7,  0,  0, HEART_REACTION},  // left: jump and emit hearts
@@ -87,7 +115,7 @@ const float MENU_X_DIRECTION = 1.0f;
 const float MENU_Y_DIRECTION = -1.0f;
 
 // A small dead zone makes the ball rest in the center until the board is tilted.
-const float MENU_CENTER_DEADZONE = 0.8f;
+const float MENU_CENTER_DEADZONE = 0.8f; //because the tilt can't be 0 perfectly 
 const float SHAKE_THRESHOLD = 7.0f;
 
 // Shake is the only movement that has an effect outside the radial menu.
@@ -488,6 +516,7 @@ void drawPet() {
     petX += static_cast<int>(sinf(now / 18.0f) * 3.0f);
   }
 
+  //short shake, jump
   if (!isNapping() && petJumpStartedAt != 0) {
     const uint32_t animationAge = now - petJumpStartedAt;
 
@@ -597,7 +626,37 @@ void drawCurrentView() {
   }
   display.display();
 }
+void playNapMusic(uint32_t now){
+  const bool napping = isNapping();
+  
+  if (!napping){
+    if(songPlaying){
+      songPlaying = false;
+      noTone(BUZZER_PIN);
+    }
+    return; 
+  }
 
+  if(!songPlaying){
+    songPlaying = true;
+    noteIndex = 0;
+    noteTime = now;
+  }
+
+  if(now < noteTime){
+    return; //current note still playing
+  }
+ 
+  if(noteIndex>=TWINKLE_LEN){
+    noteIndex = 0;
+    noteTime = now + SONG_GAP_MS;
+    return;
+  }
+  int duration = 1000/noteDurations[noteIndex];
+  tone(BUZZER_PIN, melody[noteIndex], duration * 85/100); //leave gap between notes
+  noteTime = now + duration;
+  noteIndex++;
+}
 void setup() {
   Serial.begin(115200);
   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
@@ -634,6 +693,7 @@ void loop() {
   updateDht();
   updatePetTimers();
   handleButtons();
+  playNapMusic(millis());
 
   if (currentView == MENU_VIEW) {
     updateMenuBall();
